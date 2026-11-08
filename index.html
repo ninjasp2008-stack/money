@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>أموالي</title>
+  <meta name="description" content="أموالك تحت السيطرة" />
+  <meta name="theme-color" content="#F7F8F7" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="./icon-192.png" />
+  <script>
+    // يطبّق الثيم قبل الرسم الأول لتفادي الوميض
+    (function () {
+      try {
+        var t = localStorage.getItem('amwali-theme') || 'system';
+        var dark = t === 'dark' || (t === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+        document.querySelector('meta[name=theme-color]').content = dark ? '#101512' : '#F7F8F7';
+      } catch (e) {}
+    })();
+  </script>
+  <script type="module" crossorigin src="./assets/index-BKKVRMUY.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/style-D_AfiRSw.css">
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>
